@@ -1,5 +1,6 @@
 package com.example.contacts_5_task
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,15 +18,16 @@ class InfoAboutContactsFragment : Fragment() {
     private val contact:ContactModel
         get()  = requireArguments().getSerializable(ARG_CONTACT) as ContactModel
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentInfoAboutContactsBinding.inflate(inflater,container,false)
-        binding.firstName.text = contact.firstName
-        binding.lastName.text = contact.lastName
-        binding.number.text = contact.phone
+        binding.firstName.text = "First name: ${contact.firstName}"
+        binding.lastName.text = "First name: ${contact.lastName}"
+        binding.number.text = "Phone number: ${contact.phone}"
 
         return binding.root
     }

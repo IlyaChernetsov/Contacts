@@ -15,12 +15,6 @@ import com.example.contacts_5_task.model.ContactModel
 
 
 class ContactsListFragment : Fragment() {
-    private var calls = listOf<String>(
-        Phone.DISPLAY_NAME,
-        Phone.NUMBER,
-        Phone._ID,
-    ).toTypedArray()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
