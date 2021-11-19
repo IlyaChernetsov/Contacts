@@ -26,7 +26,7 @@ class InfoAboutContactsFragment : Fragment() {
     ): View {
         binding = FragmentInfoAboutContactsBinding.inflate(inflater,container,false)
         binding.firstName.text = "First name: ${contact.firstName}"
-        binding.lastName.text = "First name: ${contact.lastName}"
+        binding.lastName.text = "Last name: ${contact.lastName}"
         binding.number.text = "Phone number: ${contact.phone}"
 
         return binding.root
